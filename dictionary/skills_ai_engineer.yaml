@@ -1,0 +1,44 @@
+# =============================================================
+# Словарь навыков для профессии «Ai инженер»
+# Инженерный профиль: разработка и интеграция LLM.
+# ДОПОЛНЕНИЕ к базовому IT-словарю (skills_mode: extend).
+# =============================================================
+
+Модели и провайдеры:
+  "llm": "LLM"
+  "llms": "LLM"
+  "openai": "OpenAI"
+  "openai api": "OpenAI API"
+  "anthropic": "Anthropic"
+  "claude": "Claude"
+  "deepseek": "DeepSeek"
+  "llama": "Llama"
+  "qwen": "Qwen"
+  "mistral": "Mistral"
+
+RAG и агенты:
+  "rag": "RAG"
+  "langchain": "LangChain"
+  "llamaindex": "LlamaIndex"
+  "эмбеддинги": "Embeddings"
+  "embeddings": "Embeddings"
+  "векторная база": "Vector DB"
+  "vector db": "Vector DB"
+  "pgvector": "pgvector"
+  "chromadb": "ChromaDB"
+  "faiss": "FAISS"
+  "mcp": "MCP"
+  "n8n": "n8n"
+
+Обучение и инференс:
+  "fine-tuning": "Fine-tuning"
+  "fine tuning": "Fine-tuning"
+  "дообучение": "Fine-tuning"
+  "lora": "LoRA"
+  "hugging face": "Hugging Face"
+  "huggingface": "Hugging Face"
+  "transformers": "Transformers"
+  "ollama": "Ollama"
+  "vllm": "vLLM"
+  "датасеты": "Датасеты"
+  "датасет": "Датасеты"

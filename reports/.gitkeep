@@ -1,0 +1,8 @@
+# reports/
+# Папка для выходных отчётов. Создаётся автоматически при запуске.
+#
+# Содержимое после запуска main.py:
+# - skills_report.xlsx        — Excel таблица навыков
+# - skills_report.csv         — CSV таблица навыков
+# - skills_chart.png          — График топ-20 навыков
+# - YYYY-MM-DD-hh-parser.pdf  — PDF-отчёт по профессиям

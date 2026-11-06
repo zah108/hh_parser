@@ -1,0 +1,23 @@
+# requirements.txt
+# Зависимости проекта HH Skills Parser
+
+# Работа с БД
+sqlalchemy>=2.0.0
+
+# Анализ данных и отчёты
+pandas>=2.1.0
+openpyxl>=3.1.0
+matplotlib>=3.8.0
+
+# Конфигурация
+pyyaml>=6.0
+
+# Selenium для парсинга hh.ru
+selenium>=4.15.0
+webdriver-manager>=4.0.0
+
+# Кликабельные ссылки в PDF
+pikepdf>=8.0
+
+# Тестирование
+pytest>=7.4.0

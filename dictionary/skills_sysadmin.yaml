@@ -1,0 +1,74 @@
+# =============================================================
+# Словарь навыков для профессии «Системный администратор»
+# ДОПОЛНЕНИЕ к базовому IT-словарю (подключать с skills_mode: extend —
+# Linux/Docker/Ansible и т.п. уже есть в skills_it.yaml).
+# =============================================================
+
+ОС и службы каталогов:
+  "windows server": "Windows Server"
+  "windows": "Windows"
+  "active directory": "Active Directory"
+  "ad": "Active Directory"
+  "group policy": "Group Policy"
+  "gpo": "Group Policy"
+  "контроллер домена": "Контроллер домена"
+
+Виртуализация:
+  "hyper-v": "Hyper-V"
+  "hyper v": "Hyper-V"
+  "vmware": "VMware"
+  "esxi": "VMware ESXi"
+  "proxmox": "Proxmox"
+  "virtualbox": "VirtualBox"
+  "виртуализация": "Виртуализация"
+
+Мониторинг:
+  "zabbix": "Zabbix"
+  "nagios": "Nagios"
+  "prometheus": "Prometheus"
+  "grafana": "Grafana"
+  "prtg": "PRTG"
+  "мониторинг": "Мониторинг"
+
+Сети:
+  "tcp/ip": "TCP/IP"
+  "dns": "DNS"
+  "dhcp": "DHCP"
+  "vpn": "VPN"
+  "vlan": "VLAN"
+  "mikrotik": "MikroTik"
+  "routeros": "RouterOS"
+  "cisco": "Cisco"
+
+Администрирование:
+  "powershell": "PowerShell"
+  "bash": "Bash"
+  "ssh": "SSH"
+  "rdp": "RDP"
+  "wsus": "WSUS"
+  "sccm": "SCCM"
+  "veeam": "Veeam"
+  "резервное копирование": "Резервное копирование"
+  "бэкапы": "Резервное копирование"
+  "бэкап": "Резервное копирование"
+  "backup": "Резервное копирование"
+  "raid": "RAID"
+  "nas": "NAS"
+  "exchange": "Microsoft Exchange"
+  "postfix": "Postfix"
+  "office 365": "Microsoft 365"
+  "microsoft 365": "Microsoft 365"
+  "google workspace": "Google Workspace"
+  "asterisk": "Asterisk"
+  "ip-телефония": "IP-телефония"
+
+Поддержка и безопасность:
+  "helpdesk": "Helpdesk"
+  "help desk": "Helpdesk"
+  "service desk": "Service Desk"
+  "itil": "ITIL"
+  "glpi": "GLPI"
+  "kaspersky": "Kaspersky"
+  "антивирус": "Антивирус"
+  "информационная безопасность": "Информационная безопасность"
+  "iso 27001": "ISO 27001"

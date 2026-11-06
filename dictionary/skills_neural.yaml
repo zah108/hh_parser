@@ -1,0 +1,37 @@
+# =============================================================
+# Словарь навыков для профессии «Нейросети»
+# Широкий прикладной профиль: пользователи и прикладные специалисты.
+# ДОПОЛНЕНИЕ к базовому IT-словарю (skills_mode: extend).
+# =============================================================
+
+Нейросети и ИИ:
+  "нейросети": "Нейросети"
+  "нейронные сети": "Нейросети"
+  "ии": "ИИ"
+  "ai": "AI"
+
+Генеративные сервисы:
+  "gpt": "GPT"
+  "chatgpt": "ChatGPT"
+  "gemini": "Gemini"
+  "gigachat": "GigaChat"
+  "giga chat": "GigaChat"
+  "yandexgpt": "YandexGPT"
+  "yandex gpt": "YandexGPT"
+  "copilot": "Copilot"
+
+Медиа и речь:
+  "midjourney": "Midjourney"
+  "stable diffusion": "Stable Diffusion"
+  "генерация изображений": "Генерация изображений"
+  "компьютерное зрение": "Computer Vision"
+  "computer vision": "Computer Vision"
+  "распознавание речи": "Распознавание речи"
+
+Прикладные навыки:
+  "промпт-инжиниринг": "Prompt Engineering"
+  "промпт инжиниринг": "Prompt Engineering"
+  "prompt engineering": "Prompt Engineering"
+  "промпты": "Prompt Engineering"
+  "ai-агенты": "AI-агенты"
+  "ai агенты": "AI-агенты"

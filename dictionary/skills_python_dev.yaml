@@ -1,0 +1,102 @@
+# =============================================================
+# Словарь для профессии «Python Developer» (база IT-навыков).
+# Подключение: skills_files -> "Python Developer": dictionary/skills_python_dev.yaml
+# Другим профессиям добавляйте этот файл первым (база) + доменное дополнение.
+# Правила: ключ в нижнем регистре -> каноническое имя; синонимы схлопываются.
+# =============================================================
+
+Языки программирования:
+  "python": "Python"
+  "javascript": "JavaScript"
+  "typescript": "TypeScript"
+  "java": "Java"
+  "go": "Go"
+  "golang": "Go"
+  "rust": "Rust"
+  "c++": "C++"
+  "c#": "C#"
+  "php": "PHP"
+  "ruby": "Ruby"
+  "kotlin": "Kotlin"
+  "swift": "Swift"
+  "scala": "Scala"
+  "r": "R"
+  "sql": "SQL"
+
+Базы данных:
+  "postgresql": "PostgreSQL"
+  "postgres": "PostgreSQL"
+  "mysql": "MySQL"
+  "mongodb": "MongoDB"
+  "mongo": "MongoDB"
+  "redis": "Redis"
+  "elasticsearch": "Elasticsearch"
+  "clickhouse": "ClickHouse"
+  "sqlite": "SQLite"
+  "oracle": "Oracle"
+
+Фреймворки:
+  "django": "Django"
+  "flask": "Flask"
+  "fastapi": "FastAPI"
+  "react": "React"
+  "vue": "Vue.js"
+  "angular": "Angular"
+  "spring": "Spring"
+  "express": "Express.js"
+  "next.js": "Next.js"
+  "nextjs": "Next.js"
+
+Инфраструктура и DevOps:
+  "docker": "Docker"
+  "kubernetes": "Kubernetes"
+  "k8s": "Kubernetes"
+  "git": "Git"
+  "linux": "Linux"
+  "aws": "AWS"
+  "gcp": "GCP"
+  "azure": "Azure"
+  "ci/cd": "CI/CD"
+  "jenkins": "Jenkins"
+  "terraform": "Terraform"
+  "ansible": "Ansible"
+  "nginx": "Nginx"
+
+API и протоколы:
+  "rest": "REST API"
+  "rest api": "REST API"
+  "api": "REST API"
+  "graphql": "GraphQL"
+  "grpc": "gRPC"
+  "websocket": "WebSocket"
+  "soap": "SOAP"
+
+Очереди и брокеры:
+  "kafka": "Apache Kafka"
+  "rabbitmq": "RabbitMQ"
+  "celery": "Celery"
+
+ML / Data:
+  "machine learning": "Machine Learning"
+  "ml": "Machine Learning"
+  "deep learning": "Deep Learning"
+  "nlp": "NLP"
+  "pandas": "Pandas"
+  "numpy": "NumPy"
+  "scikit-learn": "Scikit-learn"
+  "tensorflow": "TensorFlow"
+  "pytorch": "PyTorch"
+  "spark": "Apache Spark"
+  "hadoop": "Hadoop"
+  "airflow": "Apache Airflow"
+
+Методологии:
+  "agile": "Agile/Scrum"
+  "scrum": "Agile/Scrum"
+  "kanban": "Kanban"
+
+Прочее:
+  "unit testing": "Unit Testing"
+  "тестирование": "Unit Testing"
+  "микросервисы": "Микросервисная архитектура"
+  "microservices": "Микросервисная архитектура"

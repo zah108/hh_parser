@@ -1,0 +1,29 @@
+# parsing_hh: true — обычный парсинг hh.ru; false — без парсинга:
+# отчёт по последним 50 вакансиям каждой профессии из БД
+parsing_hh: true
+# Конфиг сбора: профессии раскомментируйте по необходимости;
+# словарь каждой — путь или список путей (база skills_python_dev.yaml + доменное дополнение)
+professions:
+  - "Системный администратор"
+  - "Бухгалтер"
+  - "Ai инженер"
+  - "Нейросети"
+  - "Python Developer"
+  - "Технический писатель"
+  - "Контент менеджер"
+area_id: 1
+max_pages: 1
+request_delay: 0.5
+db_path: "vacancies.db"
+reports_dir: "reports"
+chart_top_n: 20
+skills_file: null
+skills_files:
+  "Python Developer": "dictionary/skills_python_dev.yaml"
+  "Ai инженер": "dictionary/skills_ai_engineer.yaml"
+  "Нейросети": "dictionary/skills_neural.yaml"
+  "Бухгалтер": "dictionary/skills_accounting.yaml"
+  "Системный администратор": "dictionary/skills_sysadmin.yaml"
+  "Технический писатель": "dictionary/skills_techwriter.yaml"
+  "Контент менеджер": "dictionary/skills_content_manager.yaml"
+log_dir: "log"

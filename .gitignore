@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Виртуальное окружение
+venv/
+ENV/
+env/
+
+# База данных (создаётся автоматически)
+*.db
+*.sqlite
+*.sqlite3
+
+# Отчёты (генерируются при запуске)
+reports/*.xlsx
+reports/*.csv
+reports/*.png
+reports/*.pdf
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Тесты и покрытие
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Логи
+*.log
+
+# Не публикуется
+SKILL.md
