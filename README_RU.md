@@ -140,8 +140,9 @@ python main.py -p "Go Developer" -a 1 --pages 15
 # Быстрый прогон: меньше страниц и лимит деталей
 python main.py -p "Python Developer" --pages 2 --max-details 40
 
-# Пересчитать навыки по всей БД с новыми словарями (дополняет, не удаляет)
-python main.py --recalc-skills dictionary/skills_python_dev.yaml dictionary/skills_accounting.yaml dictionary/skills_neural.yaml dictionary/skills_ai_engineer.yaml
+# Пересчитать навыки по всей БД с новыми словарями (дополняет, не удаляет);
+# skills_*.yaml — все 7 словарей разом, можно перечислить только нужные
+python main.py --recalc-skills dictionary/skills_*.yaml
 
 # Дозаполнить организацию и дату публикации по вакансиям, сохранённым в БД
 python main.py --fill-employers
@@ -313,7 +314,7 @@ python main.py --config dictionary/config.yaml
 
 ## 🧠 Словарь навыков
 
-Система извлекает навыки по YAML-словарям из папки `dictionary/` — для каждой профессии свой файл. База для «Python Developer» (`skills_python_dev.yaml`) содержит 78 ключей (67 канонических навыков) в 9 категориях:
+Система извлекает навыки по YAML-словарям из папки `dictionary/` — для каждой профессии свой файл. Словарь для «Python Developer» (`skills_python_dev.yaml`) содержит 78 ключей (67 канонических навыков) в 9 категориях:
 
 - 💻 Языки программирования (Python, JavaScript, Go, Rust и др.)
 - 🗄️ Базы данных (PostgreSQL, MongoDB, Redis и др.)
@@ -360,7 +361,7 @@ skills_files[профессия]  →  skills_file  →  без словаря (
 Что делать: добавить ключ в словарь (одна строка) и пересчитать историю —
 
 ```bash
-python main.py --recalc-skills dictionary/skills_python_dev.yaml dictionary/skills_accounting.yaml dictionary/skills_neural.yaml dictionary/skills_ai_engineer.yaml
+python main.py --recalc-skills dictionary/skills_*.yaml
 ```
 
 Описания хранятся в БД, поэтому пересчёт применит новые ключи ко всем прошлым прогонам:
@@ -393,33 +394,26 @@ python main.py --recalc-skills dictionary/skills_python_dev.yaml dictionary/skil
 python main.py -p "Бухгалтер" --skills-file dictionary/skills_accounting.yaml
 ```
 
-Словарём может быть список файлов — сначала база, затем доменное дополнение:
-
-```yaml
-  "Нейросети": "dictionary/skills_neural.yaml"
-```
-
-Свой словарь на каждую профессию — через `skills_files` в config.yaml:
+Свой словарь на каждую профессию — через `skills_files` в config.yaml. Схема проекта:
+одна профессия — один выделенный словарь, без общей базы:
 
 ```yaml
 skills_files:
-  "Технический писатель":
-    - "dictionary/skills_python_dev.yaml"
-    - "dictionary/skills_techwriter.yaml"
-  "Контент менеджер":
-    - "dictionary/skills_python_dev.yaml"
-    - "dictionary/skills_content_manager.yaml"
+  "Python Developer": "dictionary/skills_python_dev.yaml"
   "Бухгалтер": "dictionary/skills_accounting.yaml"
   "Нейросети": "dictionary/skills_neural.yaml"
   "Ai инженер": "dictionary/skills_ai_engineer.yaml"
   "Системный администратор": "dictionary/skills_sysadmin.yaml"
+  "Технический писатель": "dictionary/skills_techwriter.yaml"
+  "Контент менеджер": "dictionary/skills_content_manager.yaml"
 ```
 
 Приоритет: `skills_files[профессия]` > `skills_file` > без словаря.
 
 Если профессии нет в `skills_files`, словаря у неё не будет — навыки извлекутся
-только из блока «Ключевые навыки». Маппьте каждую профессию; списком можно
-подключить базу и дополнение сразу.
+только из блока «Ключевые навыки». Маппьте каждую профессию. Код принимает и
+список файлов (значения сольются в один словарь), но текущая схема использует
+один файл на профессию.
 
 ### Советы по развитию словаря
 

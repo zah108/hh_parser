@@ -140,8 +140,9 @@ python main.py -p "Go Developer" -a 1 --pages 15
 # Quick run: fewer pages and a details limit
 python main.py -p "Python Developer" --pages 2 --max-details 40
 
-# Recalculate skills over the whole DB with new dictionaries (adds, never deletes)
-python main.py --recalc-skills dictionary/skills_python_dev.yaml dictionary/skills_accounting.yaml dictionary/skills_neural.yaml dictionary/skills_ai_engineer.yaml
+# Recalculate skills over the whole DB with new dictionaries (adds, never deletes);
+# skills_*.yaml expands to all seven dictionaries — or list only the ones you need
+python main.py --recalc-skills dictionary/skills_*.yaml
 
 # Backfill employer and publication date for vacancies stored in the DB
 python main.py --fill-employers
@@ -313,7 +314,7 @@ Numbers are approximate: they depend on your connection and hh.ru load.
 
 ## 🧠 Skills Dictionary
 
-The system extracts skills using YAML dictionaries from the `dictionary/` folder — one file per profession. The base dictionary for "Python Developer" (`skills_python_dev.yaml`) contains 78 keys (67 canonical skills) in 9 categories:
+The system extracts skills using YAML dictionaries from the `dictionary/` folder — one file per profession. The dictionary for "Python Developer" (`skills_python_dev.yaml`) contains 78 keys (67 canonical skills) in 9 categories:
 
 - 💻 Programming languages (Python, JavaScript, Go, Rust, etc.)
 - 🗄️ Databases (PostgreSQL, MongoDB, Redis, etc.)
@@ -360,7 +361,7 @@ Example of the "Key skills" block on an hh.ru vacancy:
 What to do: add the key to the dictionary (one line) and recalculate history —
 
 ```bash
-python main.py --recalc-skills dictionary/skills_python_dev.yaml dictionary/skills_accounting.yaml dictionary/skills_neural.yaml dictionary/skills_ai_engineer.yaml
+python main.py --recalc-skills dictionary/skills_*.yaml
 ```
 
 Descriptions are stored in the DB, so recalculation applies new keys to all past runs:
@@ -393,33 +394,26 @@ do not affect extraction logic: the dictionary is "flattened" into a plain
 python main.py -p "Бухгалтер" --skills-file dictionary/skills_accounting.yaml
 ```
 
-A dictionary can be a list of files — base first, then the domain supplement:
-
-```yaml
-  "Нейросети": "dictionary/skills_neural.yaml"
-```
-
-A custom dictionary per profession — via `skills_files` in config.yaml:
+A custom dictionary per profession — via `skills_files` in config.yaml. The project scheme:
+one profession — one dedicated dictionary, no shared base:
 
 ```yaml
 skills_files:
-  "Технический писатель":
-    - "dictionary/skills_python_dev.yaml"
-    - "dictionary/skills_techwriter.yaml"
-  "Контент менеджер":
-    - "dictionary/skills_python_dev.yaml"
-    - "dictionary/skills_content_manager.yaml"
+  "Python Developer": "dictionary/skills_python_dev.yaml"
   "Бухгалтер": "dictionary/skills_accounting.yaml"
   "Нейросети": "dictionary/skills_neural.yaml"
   "Ai инженер": "dictionary/skills_ai_engineer.yaml"
   "Системный администратор": "dictionary/skills_sysadmin.yaml"
+  "Технический писатель": "dictionary/skills_techwriter.yaml"
+  "Контент менеджер": "dictionary/skills_content_manager.yaml"
 ```
 
 Priority: `skills_files[profession]` > `skills_file` > no dictionary.
 
 If a profession is missing from `skills_files`, it gets no dictionary — skills are extracted
-only from the "Key skills" block. Map every profession; a list lets you connect
-the base and a supplement at once.
+only from the "Key skills" block. Map every profession. The code also accepts
+a list of files (entries are merged into one dictionary), but the current scheme
+uses a single file per profession.
 
 ### Tips for Growing the Dictionary
 
